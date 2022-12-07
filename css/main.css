@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,100;1,400;1,500;1,600&display=swap');
+
+/* Start Variables */
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-color: rgb(2, 2, 105)
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/*don't repeat*/
+.title {
+    display: flex;
+    justify-content: center;
+    color: #ccc;
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px #ddd;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* Starting - Header */
+header {
+    background-color: rgb(234, 234, 234);
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+    height: 60px;
+}
+
+header .logo {
+    text-decoration: none;
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.8em;
+}
+
+header .navigation a {
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 400;
+    padding-left: 30px;
+    color: blue;
+}
+
+header .navigation a:hover {
+    color: blueviolet;
+}
+
+/* end-Header */
+
+/* start-main */
+section {
+    padding: 100px 200px;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(../images/pexels-elvis-2528118.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.main h2 {
+    color: rgb(2, 2, 105);
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.main h2 span {
+    display: inline-block;
+    margin-top: 10px;
+    color: rgb(4, 4, 105);
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.main h3 {
+    font-weight: 1000;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 1.5em;
+    max-width: 70%;
+    line-height: 50px;
+    color: rgb(0, 0, 0);
+}
+
+.main .main-btn {
+    color: white;
+    background-color: #455e44;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition: .5s ease;
+}
+
+.main .main-btn:hover {
+    background-color: #055e00;
+    transform: scale(1.1);
+}
+
+.main .social-icons a {
+    font-size: 2.5em;
+    padding-right: 30px;
+    color: transparent;
+}
+
+.main .social-icons a i {
+    color: var(--main-color);
+}
+
+/* end-main */
+/* start-skills */
+.cards .content .card {
+    background-color: #fff;
+    width: 20.06em;
+    box-shadow: 0 5px 25px #ccc;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: .7s;
+    text-align: center;
+    min-height: 20em;
+}
+
+.cards .content .card:hover {
+    transform: scale(1.1);
+    background-color: #eee;
+}
+
+.cards .content .card i {
+    font-size: 8em;
+    color: var(--main-color);
+}
+
+.cards .content .card .info {
+    text-align: center;
+}
+
+.cards .content .card .info h3 {
+    font-weight: 700;
+    margin: 10px;
+    font-size: 1.3em;
+    color: var(--main-color);
+
+}
+
+/* ending-skills */
+/* start-projects */
+.projects {
+    background-color: b#ccc;
+}
+
+.projects .content {
+    margin-top: 30px;
+}
+
+.project-card {
+    background-color: #eee;
+    border: 1px solid white;
+    min-height: 14em;
+    width: 19em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: .7s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.1);
+}
+.project-image{
+    width: 95%;
+    margin: 5px auto;
+}
+.project-card:hover .project-image {
+    opacity: .8;
+}
+
+.project-card .project-image img {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 18em;
+}
+
+.project-card .project-info {
+    padding: 1em;
+}
+
+.project-card .project-info .project-category {
+    font-size: .8em;
+    color: black;
+}
+
+.project-card .project-info .project-title {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.project-card .project-info .read-more {
+    text-decoration: none;
+    color: blue;
+}
+
+.project-card .project-info .read-more:hover {
+    color: blueviolet;
+}
+
+/* ending-projects */
+a {
+    text-decoration: none;
+}
+
+footer {
+    background-color: #000016;
+    color: white;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer i {
+    margin-right: 5px;
+    font-size: 1.8em;
+    color: white;
+}
+
+.footer-title {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.footer-title span {
+    color: #3a6cf4;
+}
+
+@media(max-width:1023px) {
+    header {
+        padding: 12px 8px;
+    }
+
+    header .logo {
+        font-weight: 600;
+        font-size: 1em;
+    }
+
+    header .navigation {
+        width: 60%;
+    }
+
+    header .navigation a {
+        padding: 3px;
+        font-size: .8em;
+        font-weight: 400;
+    }
+
+    .title {
+        font-size: 1.8em;
+    }
+
+    section {
+        padding: 80px 20px;
+    }
+    .main h2 {
+        font-size: 1em;
+        font-weight: 300;
+    }
+
+    .main h3 {
+        font-weight: 300;
+        letter-spacing: .5px;
+        font-size: 1.4em;
+        max-width: 90%;
+        line-height: 25px;
+    }
+
+    img {
+        width: 20px;
+    }
+
+    .cards {
+        text-align: center;
+    }
+    .card{
+        width: 95%;
+        margin: 5px auto;
+    }
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+.project-card {
+    width: 95%;
+    margin: 5px auto;
+}
+    .project-card:hover .project-image {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .project-card .project-image img {
+        margin: 10px auto;
+        width: 80%;
+    }
+
+    .project-card .project-info .read-more {
+        margin-right: 10px;
+    }
+    footer i {
+        margin-right: 1px;
+        font-size: .9em;
+        color: white;
+    }
+    @media (max-width:641px) {
+        body {
+            font-size: 12px;
+        }
+    }
+    @media(max-width:650px) {
+        .main {
+            background: url(../images/background3.jpg);
+        }
+    }
+}
