@@ -86,17 +86,34 @@ section {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url(../images/pexels-elvis-2528118.jpg);
+    /* background: url(../images/pexels-elvis-2528118.jpg); */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    position: relative;
+}
+
+.main::before {
+    content: "";
+    background: url(../images/pexels-elvis-2528118.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: .75;
 }
 
 .main h2 {
     color: rgb(2, 2, 105);
     font-size: 1.5em;
     font-weight: 600;
+    position: relative;
 }
 
 .main h2 span {
@@ -105,6 +122,7 @@ section {
     color: rgb(4, 4, 105);
     font-size: 3em;
     font-weight: 600;
+    position: relative;
 }
 
 .main h3 {
@@ -115,7 +133,9 @@ section {
     font-size: 1.5em;
     max-width: 70%;
     line-height: 50px;
-    color: rgb(0, 0, 0);
+    color: rgb(4, 4, 105);
+    position: relative;
+
 }
 
 .main .main-btn {
@@ -130,6 +150,7 @@ section {
     border-radius: 15px;
     margin-bottom: 40px;
     transition: .5s ease;
+    position: relative;
 }
 
 .main .main-btn:hover {
@@ -145,6 +166,7 @@ section {
 
 .main .social-icons a i {
     color: var(--main-color);
+    position: relative;
 }
 
 /* end-main */
@@ -207,10 +229,8 @@ section {
 .project-card:hover {
     transform: scale(1.1);
 }
-.project-image{
-    width: 95%;
-    margin: 5px auto;
-}
+
+
 .project-card:hover .project-image {
     opacity: .8;
 }
@@ -225,8 +245,9 @@ section {
 }
 
 .project-card .project-info .project-category {
-    font-size: .8em;
-    color: black;
+    font-size: 1.3em;
+    color: var(--main-color);
+    min-height: 100px;
 }
 
 .project-card .project-info .project-title {
@@ -274,26 +295,42 @@ footer i {
     color: #3a6cf4;
 }
 
+/* Starting More Features */
+/* Button Scroll Up */
+.scroll{
+    background-color: #ccc;
+    border: none;
+    color: var(--main-color);
+    border-radius: 10px;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: none;
+}
+.scroll i {
+font-size: 3em;
+}
 @media(max-width:1023px) {
     header {
         padding: 12px 8px;
     }
-
     header .logo {
         font-weight: 600;
         font-size: 1em;
     }
-
     header .navigation {
         width: 60%;
+        padding-left: 15%;
     }
-
     header .navigation a {
         padding: 3px;
         font-size: .8em;
         font-weight: 400;
     }
-
     .title {
         font-size: 1.8em;
     }
@@ -301,47 +338,59 @@ footer i {
     section {
         padding: 80px 20px;
     }
+
+    .main::before {
+        opacity: .1;
+    }
+
     .main h2 {
-        font-size: 1em;
-        font-weight: 300;
+        font-size: 1.4em;
+        font-weight: 600;
     }
 
     .main h3 {
-        font-weight: 300;
+        font-weight: 800;
         letter-spacing: .5px;
         font-size: 1.4em;
         max-width: 90%;
         line-height: 25px;
     }
+
     .cards {
         text-align: center;
     }
-    .card{
+
+    .card {
         width: 95%;
         margin: 5px auto;
     }
+
     .content {
         flex-direction: column;
         align-items: center;
     }
-.project-card {
-    width: 95%;
-    margin: 5px auto;
-}
+
+    .project-card {
+        width: 95%;
+        margin: 5px auto;
+    }
 
     .project-card .project-info .read-more {
         margin-right: 10px;
     }
+
     footer i {
         margin-right: 1px;
         font-size: .9em;
         color: white;
     }
+
     @media (max-width:641px) {
         body {
             font-size: 12px;
         }
     }
+
     @media(max-width:650px) {
         .main {
             background: url(../images/background3.jpg);
