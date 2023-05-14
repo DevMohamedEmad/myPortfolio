@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohamed Emad</title>
     <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/main.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,100;1,400;1,500;1,600&display=swap"
         rel="stylesheet">
@@ -17,6 +21,8 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link>
+    <link rel="stylesheet" href="css/main.css">
+
 </head>
 
 <body>
@@ -24,8 +30,10 @@
     <header>
         <a href="#" class="logo"></a>
         <nav class="navigation">
+            <a href="#projects">Learning</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
+            <a href="#Testemonial">Testemonial</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -37,7 +45,8 @@
             <h2>Hello ,I'm MOHAMED <br>
                 <span> Back-End Developer</span>
             </h2>
-            <h3>I am in love with back-end web development Using PHP - Laravel . I am a fast learner and Passionate for learning new
+            <h3>I am in love with back-end web development Using PHP - Laravel . I am a fast learner and Passionate for
+                learning new
                 technologies. I aim to learn professional processes of software development and work with a team
                 according to structured standards in a productive environment.</h3>
             <a href="#projects" class="main-btn">View My Work</a>
@@ -69,7 +78,6 @@
                 </div>
                 <div class="info">
                     <h3>Html5</h3>
-                    
                 </div>
             </div>
             <div class="card">
@@ -86,6 +94,14 @@
                 </div>
                 <div class="info">
                     <h3>Java Script</h3>
+                </div>
+            </div>
+            <div class="card">
+                <div>
+                    <i class="fa-brands fa-bootstrap"></i>
+                </div>
+                <div class="info">
+                    <h3>Bootstrap</h3>
                 </div>
             </div>
             <div class="card">
@@ -128,69 +144,159 @@
     <section class="projects" id="projects">
         <h2 class="title"> Projects</h2>
         <div class="content">
-            <div class="project-card">
-                <div class="project-info">
-                    <h2>Chat Application </h2>
-                    <p class="project-category">Chat Application Using Html - CSS - JavaScript - PHP - Mysql </p>
-                    <strong class="project-title">
-                        <span><a href="https://devmohamedemad.github.io/chatApp/">Read More</a> </span>
-                        <a href="https://github.com/DevMohamedEmad/chatApp.git" class="read-more"> Code </a>
-                    </strong>
+            <div class="card" style="width: 22rem;">
+                <img src="./images/cover.png" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">DevZone</h5>
+                    <p class="card-text"> Graduation Project in ITI</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Html - Css - JS - Bootstrap</li>
+                    <li class="list-group-item">Laravel - Angular</li>
+                    <li class="list-group-item">Api</li>
+                </ul>
+                <div class="card-body">
+                    <a href="https://github.com/DevMohamedEmad/devZone" class="btn bg-c-accept">Code </a>
+                    <a href="#" class="btn bg-c-blue">Not Published</a>
                 </div>
             </div>
-            <div class="project-card">
-                <div class="project-info">
-                    <h2> My Portfolio </h2>
-                    <p class="project-category"> My Portfolio Using HTML - CSS -JAVASCRIPT </p>
-                    <strong class="project-title">
-                        <span> <a href="https://devmohamedemad.github.io/myPortfolio/"> Show Thw Website</a></span>
-                        <a href="https://github.com/DevMohamedEmad/myPortfolio.git" class="read-more"> Code </a>
-                    </strong>
+            <div class="card" style="width: 22rem; ">
+                <img src="./images/ORH93N14-2048x1365.png" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Jamiah</h5>
+                    <p class="card-text"> الجمعية العمومية -غرقة بيشة بالسعودية</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Html - Css - JS - Bootstrap</li>
+                    <li class="list-group-item">Laravel (Dashboard)</li>
+                    <li class="list-group-item">Web</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="btn bg-c-accept">Code </a>
+                    <a href="https://jamiah.online/bishacci/" class="btn bg-c-blue">Show</a>
                 </div>
             </div>
-            <div class="project-card">
-                <div class="project-info">
-                    <h2>Landing</h2>
-                    <p class="project-category">Templete One Is A first Practice on Html And Css This Project</p>
-                    <strong class="project-title">
-                        <span><a href="https://devmohamedemad.github.io/Elzero-Practice/">  Show Thw Website</a></span>
-                        <a href="https://github.com/DevMohamedEmad/Elzero-Practice.git" class="read-more"> Code </a>
-                    </strong>
+            <div class="card" style="width: 22rem; ">
+                <img src="./images/chatApp.png" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Chat Application</h5>
+                    <p class="card-text"> learning </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Html - Css - JS - Bootstrap</li>
+                    <li class="list-group-item">PHP - MYSQL</li>
+                    <li class="list-group-item">Web</li>
+                </ul>
+                <div class="card-body">
+                    <a href="https://github.com/DevMohamedEmad/chatApp.git" class="btn bg-c-accept">Code </a>
+                    <a href="" class="btn bg-c-blue">Not Published</a>
                 </div>
             </div>
-            <div class="project-card">
-                <div class="project-info">
-                    <h2>Payment - Methods</h2>
-                    <p class="project-category">Payment - Methods With Paypal Using Laravel FrameWork </p>
-                    <strong class="project-title">
-                        <span> Payment-Meyhods </span>
-                        <a href="https://github.com/DevMohamedEmad/Payment-Meyhods.git/" class="read-more"> Code </a>
-                    </strong>
+            <div class="card" style="width: 22rem; ">
+                <img src="./images/Screenshot from 2023-05-14 03-29-41.png" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Bright Empire</h5>
+                    <p class="card-text"> The best limousine company with professional drivers proudly serving NYC and
+                        the TRI state area for decade</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Html - Css - JS - Bootstrap</li>
+                    <li class="list-group-item">Laravel (Dashboard)</li>
+                    <li class="list-group-item">Web</li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="btn bg-c-accept">Code </a>
+                    <a href="https://brightempirelimonyc.com/" class="btn bg-c-blue">Show</a>
                 </div>
             </div>
-            <div class="project-card">
-                <div class="project-info">
-                    <h2> CRUD-MVC </h2>
-                    <p class="project-category"> CRUD-MVC Is A Micro MVC Appling On The Crud Operations </p>
-                    <strong class="project-title">
-                        <span> CRUD-MVC </span>
-                        <a href="https://github.com/DevMohamedEmad/CRUD-MVC.git" class="read-more"> Code </a>
-                    </strong>
+
+            <div class="card" style="width: 22rem; ">
+                <img src="./images/project1.png" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Sci-App</h5>
+                    <p class="card-text"> My Graduation Project at Faculty of Science With Degree (-A)</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Html - Css - JS - Bootstrap</li>
+                    <li class="list-group-item">Laravel (Dashboard) + Flutter</li>
+                    <li class="list-group-item">Api</li>
+                </ul>
+                <div class="card-body">
+                    <a href="https://github.com/DevMohamedEmad/sciapp.git" class="btn bg-c-accept">Code </a>
+                    <a href="#" class="btn bg-c-blue">Not Published</a>
                 </div>
             </div>
-            <div class="project-card">
-                <div class="project-info">
-                    <h2>SCIAPP</h2>
-                    <p class="project-category">This Project My Graduation Project</p>
-                    <strong class="project-title">
-                        <span> <a href="https://devmohamedemad.github.io/sciapp/">Read More </a> </span>
-                        <a href="https://github.com/DevMohamedEmad/sciapp.git" class="read-more"> Code </a>
-                    </strong>
+            <div class="card" style="width: 22rem; ">
+                <img src="./images/Screenshot from 2023-05-14 18-04-26.png" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">My Portfolio</h5>
+                    <p class="card-text"> This Website created by me</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Html - Css - JS</li>
+                    <li class="list-group-item">Bootstrap</li>
+                    <li class="list-group-item">Github</li>
+                </ul>
+                <div class="card-body">
+                    <a href="https://github.com/DevMohamedEmad/myPortfolio.git" class="btn bg-c-accept">Code </a>
+                    <a href="https://devmohamedemad.github.io/myPortfolio/" class="btn bg-c-blue">Show</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 22rem; ">
+                <img src="./images/Screenshot from 2023-05-14 18-10-21.png" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Livewire</h5>
+                    <p class="card-text"> Laravel-Livewire</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Html - Css - JS</li>
+                    <li class="list-group-item">Bootstrap</li>
+                    <li class="list-group-item">Laravel - Livewire</li>
+                </ul>
+                <div class="card-body">
+                    <a href="https://github.com/DevMohamedEmad/laravel-livewire" class="btn bg-c-accept">Code </a>
+                    <a href="" class="btn bg-c-blue">Not Published</a>
+                </div>
+            </div>
+
+            <div class="card" style="width: 22rem; ">
+                <img src="./images/Screenshot from 2023-05-14 18-15-26.png" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Landing Page</h5>
+                    <p class="card-text"></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Html</li>
+                    <li class="list-group-item">Css</li>
+                    <li class="list-group-item">GitHub</li>
+                </ul>
+                <div class="card-body">
+                    <a href="https://github.com/DevMohamedEmad/Elzero-Practice.git" class="btn bg-c-accept">Code </a>
+                    <a href="https://devmohamedemad.github.io/Elzero-Practice/" class="btn bg-c-blue">Show</a>
                 </div>
             </div>
         </div>
     </section>
     <!-- end-projects -->
+
+    <!-- start-testemonial -->
+    <section class="projects" id="Testemonial">
+        <h2 class="title"> Our Testemonial</h2>
+        <div class="content">
+            <div class="project-card">
+                <div class="testemonial-image">
+                    <img src="./images/Screenshot from 2023-05-14 01-29-35.png" alt="" srcset="">
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="testemonial-image">
+                    <img src="./images/Screenshot from 2023-05-14 01-28-39.png" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end-testemonial -->
 
     <!-- Start - Contact -->
     <section class="cards contact" id="contact">
@@ -203,7 +309,9 @@
                 </div>
                 <div class="info">
                     <h3>Whatsapp</h3>
-                    <p>+201210382986</p>
+                    <ahref="https: //wtsi.me/201210382986">
+                        <p>Contact Me</p>
+                        </a>
                 </div>
             </div>
 
@@ -213,7 +321,21 @@
                 </div>
                 <div class="info">
                     <h3>Linkedin</h3>
-                    <a href="https://www.linkedin.com/in/mohamed-emad-264a36230"><p>Contact Me</p></a>
+                    <a href="https://www.linkedin.com/in/mohamed-emad-264a36230">
+                        <p>Contact Me</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="mosaqel-logo">
+                    <h3>مستقل</h3>
+                </div>
+                <div class="info">
+                    <h3>Mostaqel</h3>
+                    <a href="https://mostaql.com/u/mohamedemad0592">
+                        <p>Contact Me</p>
+                    </a>
                 </div>
             </div>
 
@@ -223,7 +345,9 @@
                 </div>
                 <div class="info">
                     <h3>Email</h3>
-                    <a href="mailto:mohamedemad0592@gmail.com"><p>Contact Me </p></a>
+                    <a href="mailto:mohamedemad0592@gmail.com">
+                        <p>Contact Me </p>
+                    </a>
                 </div>
             </div>
         </div>
@@ -251,9 +375,10 @@
     </footer>
     <!-- End - Footer -->
 
-<!-- More - Features -->
+    <!-- More - Features -->
     <!-- Scrolling - button -->
     <button class="scroll"> <i class="fas fa-arrow-alt-circle-up"></i></button>
 </body>
 <script src="./js/script.js"></script>
+
 </html>

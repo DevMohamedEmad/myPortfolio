@@ -17,7 +17,7 @@ let x = setInterval(function(){
 let footerTitle = document.getElementsByClassName("footer-title")[0]
 day = new Date()
 year = day.getFullYear()
-footerTitle.innerHTML = ` copyright ${year} @ <span> Mohamed Emad </span>`
+footerTitle.innerHTML = ` copyright ${year} @ <span > Mohamed Emad </span>`
 
 
 
