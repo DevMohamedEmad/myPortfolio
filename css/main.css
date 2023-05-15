@@ -64,8 +64,14 @@ body {
     background-color: #025287;
     color: white;
 }
-a:link { text-decoration: none; }
-.btn:hover { color: #000016;}
+
+a:link {
+    text-decoration: none;
+}
+
+.btn:hover {
+    color: #000016;
+}
 
 /*don't repeat*/
 .title {
@@ -159,13 +165,12 @@ section {
     font-size: 1.5em;
     font-weight: 600;
     position: relative;
-    font-family: 'Satisfy', cursive;
 }
 
 .main h2 span {
     display: inline-block;
     margin-top: 10px;
-    color: var(--gold-color);
+    color: var(--primary);
     font-size: 3em;
     font-weight: 600;
     position: relative;
@@ -234,9 +239,11 @@ section {
     transform: scale(1.1);
     background-color: #eee;
 }
+
 .card img {
     max-height: 150px;
 }
+
 .cards .content .card i {
     font-size: 8em;
     color: var(--main-color);
@@ -320,7 +327,7 @@ section {
 /* ending-projects */
 
 footer {
-    background-color: #000016;
+    background-color: var(--primary);
     color: white;
     padding: 2em;
     display: flex;
@@ -330,7 +337,7 @@ footer {
 footer i {
     margin-right: 5px;
     font-size: 1.8em;
-    color: white;
+    color: var(--gold-color);
 }
 
 .footer-title {
@@ -339,7 +346,7 @@ footer i {
 }
 
 .footer-title span {
-    color: #3a6cf4;
+    color: var(--gold-color);
 }
 
 /* Starting More Features */
@@ -375,7 +382,7 @@ footer i {
 
     header .navigation {
         width: 60%;
-        padding-left: 15%;
+        /* padding-left: 15%; */
     }
 
     header .navigation a {
@@ -418,6 +425,11 @@ footer i {
         margin: 15px auto;
     }
 
+    .projects {
+        align-items: center;
+
+    }
+
     .content {
         flex-direction: column;
         align-items: center;
@@ -437,17 +449,22 @@ footer i {
         font-size: .9em;
         color: white;
     }
+}
 
-    @media (max-width:641px) {
-        body {
-            font-size: 12px;
-        }
+@media (max-width:370px) {
+    .navigation {
+        display: none;
     }
 
-    @media(max-width:650px) {
-        .main {
-            background: url(../images/background3.jpg);
-        }
+    .card {
+        margin: 10px auto;
+        width: 100% !important;
+    }
+}
+
+@media (max-width:641px) {
+    body {
+        font-size: 12px;
     }
 }
 
@@ -463,9 +480,6 @@ footer i {
     font-family: 'Courgette', cursive;
 }
 
-.card-link {
-    background: linear-gradient();
-}
-.card-text{
+.card-text {
     min-height: 80px;
 }
