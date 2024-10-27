@@ -48,7 +48,7 @@ function downloadFile() {
     const a = document.createElement('a');
     a.href = filePath;
     a.target = '_blank';
-    a.download = 'cv.pdf';
+    a.download = 'MohamedEmadCV.pdf';
 
     // Append the anchor element to the body
     a.download = ''; 
