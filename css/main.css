@@ -352,7 +352,7 @@ footer i {
 /* Starting More Features */
 /* Button Scroll Up */
 .scroll {
-    background-color: #ccc;
+    background-color: transparent;
     border: none;
     color: var(--main-color);
     border-radius: 10px;
