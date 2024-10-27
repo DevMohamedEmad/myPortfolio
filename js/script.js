@@ -42,7 +42,7 @@ scroll.onclick = function (){
 // Download CV
 function downloadFile() {
     // Path to the file on the server
-    const filePath = './cv.pdf';
+    const filePath = './mohamed_emad_cv.pdf';
 
     // Create an anchor element
     const a = document.createElement('a');
