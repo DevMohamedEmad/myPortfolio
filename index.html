@@ -1,393 +1,714 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohamed Emad</title>
-    <link rel="stylesheet" href="css/all.min.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,100;1,400;1,500;1,600&display=swap"
-        rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link>
-    <link rel="stylesheet" href="css/main.css">
-
+    <title>Mohamed Emad - Backend Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+        /* Custom animations and gradients */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        
+        .bg-gradient-main {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #312e81 100%);
+        }
+        
+        .bg-gradient-card {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 51, 234, 0.1) 100%);
+        }
+        
+        .backdrop-blur-custom {
+            backdrop-filter: blur(10px);
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Hide scrollbar but keep functionality */
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
 </head>
+<body class="bg-gradient-main min-h-screen text-white">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-transparent">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-white">
+                    <span class="text-blue-400">Dev</span>Portfolio
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-white hover:text-blue-400 transition-colors duration-300">Home</a>
+                    <a href="#about" class="text-white hover:text-blue-400 transition-colors duration-300">About</a>
+                    <a href="#skills" class="text-white hover:text-blue-400 transition-colors duration-300">Skills</a>
+                    <a href="#projects" class="text-white hover:text-blue-400 transition-colors duration-300">Projects</a>
+                    <a href="#contact" class="text-white hover:text-blue-400 transition-colors duration-300">Contact</a>
+                </div>
 
-<body>
-    <!-- starting -header -->
-    <header>
-        <a href="#" class="logo"></a>
-        <nav class="navigation">
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#Testemonial">Testemonial</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-    <!-- End -header -->
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
 
-    <!-- start - home -->
-    <section class="main">
-        <div style="width: 100%;">
-            <h2>Hello ,I'm MOHAMED <br>
-                <span> Back-End Developer</span>
-            </h2>
-            <h3>I am in love with back-end web development Using PHP - Laravel . I am a fast learner and Passionate for
-                learning new
-                technologies. I aim to learn professional processes of software development and work with a team
-                according to structured standards in a productive environment.</h3>
-            <a href="#projects" class="main-btn">View My Work</a>
-            <button onclick="downloadFile()" class="main-btn">My CV</button>
-            <div class="social-icons">
-                <a href="https://github.com/DevMohamedEmad">
-                    <i class="fab fa-github-square"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/mohamed-emad-264a36230">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://wa.me/qr/Z6CASRFHS4E7P1" target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <a href="https://www.facebook.com/profile.php?id=100034349611477">
-                    <i class="fab fa-facebook-square"></i>
-                </a>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 py-4 bg-slate-800/95 rounded-lg">
+                <a href="#home" class="block px-4 py-2 text-white hover:text-blue-400 transition-colors duration-300">Home</a>
+                <a href="#about" class="block px-4 py-2 text-white hover:text-blue-400 transition-colors duration-300">About</a>
+                <a href="#skills" class="block px-4 py-2 text-white hover:text-blue-400 transition-colors duration-300">Skills</a>
+                <a href="#projects" class="block px-4 py-2 text-white hover:text-blue-400 transition-colors duration-300">Projects</a>
+                <a href="#contact" class="block px-4 py-2 text-white hover:text-blue-400 transition-colors duration-300">Contact</a>
             </div>
         </div>
-    </section>
-    <!-- End - home -->
+    </nav>
 
-    <!-- start - services -->
-    <section class="cards" id="skills">
-        <h2 class="title">Skills</h2>
-        <div class="content">
-            <div class="card">
-                <div>
-                    <i class="fab fa-html5"></i>
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden px-4 sm:px-6">
+        <!-- Background Effects -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute -top-20 -right-20 sm:-top-40 sm:-right-40 w-40 h-40 sm:w-80 sm:h-80 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute -bottom-20 -left-20 sm:-bottom-40 sm:-left-40 w-40 h-40 sm:w-80 sm:h-80 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+        </div>
+
+        <div class="text-center z-10 w-full max-w-4xl mx-auto animate-fade-in-up">
+            <div class="mb-6 sm:mb-8">
+                <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight">
+                    Hello, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Mohamed Emad</span>
+                </h1>
+                <div class="text-lg sm:text-2xl md:text-3xl text-blue-300 mb-6 sm:mb-8">
+                    <span id="typewriter">Backend Developer</span><span class="animate-pulse">|</span>
                 </div>
-                <div class="info">
-                    <h3>Html5</h3>
-                </div>
-            </div>
-            <div class="card">
-                <div>
-                    <i class="fab fa-css3"></i>
-                </div>
-                <div class="info">
-                    <h3>CSS3</h3>
-                </div>
-            </div>
-            <div class="card">
-                <div>
-                    <i class="fab fa-js"></i>
-                </div>
-                <div class="info">
-                    <h3>Java Script</h3>
-                </div>
+                <p class="text-base sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
+                    Backend Developer with 3+ years of professional experience, specializing in building and maintaining scalable web applications using Laravel. A Computer Science graduate committed to delivering high-performance backend solutions.
+                </p>
             </div>
 
-            <div class="card">
-                <div>
-                    <img src="./images/jquery.png" alt="">
-                </div>
-                <div class="info">
-                    <h3>Jquery</h3>
-                </div>
+            <div class="flex justify-center space-x-4 sm:space-x-6 mb-8 sm:mb-12">
+                <a href="https://github.com/DevMohamedEmad" class="p-2 sm:p-3 bg-blue-600 hover:bg-blue-700 rounded-full transition-colors duration-300">
+                    <i data-lucide="github" class="w-5 h-5 sm:w-6 sm:h-6 text-white"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/mohamed-emad-264a36230" class="p-2 sm:p-3 bg-blue-600 hover:bg-blue-700 rounded-full transition-colors duration-300">
+                    <i data-lucide="linkedin" class="w-5 h-5 sm:w-6 sm:h-6 text-white"></i>
+                </a>
+                <a href="https://wa.me/qr/Z6CASRFHS4E7P1" class="p-2 sm:p-3 bg-blue-600 hover:bg-blue-700 rounded-full transition-colors duration-300">
+                    <i data-lucide="mail" class="w-5 h-5 sm:w-6 sm:h-6 text-white"></i>
+                </a>
             </div>
 
-            <div class="card">
-                <div>
-                    <i class="fa-brands fa-bootstrap"></i>
-                </div>
-                <div class="info">
-                    <h3>Bootstrap</h3>
-                </div>
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-0 sm:space-x-4 items-center justify-center">
+                <button onclick="scrollToSection('about')" class="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 sm:px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
+                    View My Work
+                </button>
+                <button onclick="downloadCV()" class="w-full sm:w-auto border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-6 sm:px-8 py-3 rounded-full font-semibold transition-all duration-300">
+                    Download CV
+                </button>
             </div>
-            <div class="card">
-                <div>
-                    <i class="fab fa-php"></i>
-                </div>
-                <div class="info">
-                    <h3>PHP</h3>
-                </div>
-            </div>
-            <div class="card">
-                <div>
-                    <i class="fas fa-database"></i>
-                </div>
-                <div class="info">
-                    <h3>Mysql</h3>
-                </div>
-            </div>
-            <div class="card">
-                <div>
-                    <i class="fab fa-laravel"></i>
-                </div>
-                <div class="info">
-                    <h3>Laravel</h3>
-                </div>
-            </div>
-            <div class="card">
-                <div>
-                    <i class="fab fa-github-square"></i>
-                </div>
-                <div class="info">
-                    <h3>Github</h3>
-                </div>
-            </div>
+
+            <!-- <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <button onclick="scrollToSection('about')">
+                    <i data-lucide="chevron-down" class="w-6 h-6 sm:w-8 sm:h-8 text-blue-400"></i>
+                </button>
+            </div> -->
         </div>
     </section>
-    <!-- End - services -->
 
-    <!-- start-projects -->
-    <section class="projects" id="projects">
-        <h2 class="title"> Projects</h2>
-        <div class="content">
-            <div class="card" style="width: 20rem;">
-                <img src="./images/cover.png" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">DevZone</h5>
-                    <p class="card-text"> Graduation Project in ITI</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Html - Css - JS - Bootstrap</li>
-                    <li class="list-group-item">Laravel - Angular</li>
-                    <li class="list-group-item">Api</li>
-                </ul>
-                <div class="card-body">
-                    <a href="https://github.com/DevMohamedEmad/devZone" class="btn bg-c-accept">Code </a>
-                    <a href="#" class="btn bg-c-blue">Not Published</a>
-                </div>
-            </div>
-            <div class="card" style="width: 20rem; ">
-                <img src="./images/ORH93N14-2048x1365.png" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">Jamiah</h5>
-                    <p class="card-text"> الجمعية العمومية -غرقة بيشة بالسعودية</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Html - Css - JS - Bootstrap</li>
-                    <li class="list-group-item">Laravel (Dashboard)</li>
-                    <li class="list-group-item">Web</li>
-                </ul>
-                <div class="card-body">
-                    <a href="#" class="btn bg-c-accept">Code </a>
-                    <a href="https://jamiah.online/bishacci/" class="btn bg-c-blue">Show</a>
-                </div>
-            </div>
-            <div class="card" style="width: 20rem; ">
-                <img src="./images/chatApp.png" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">Chat Application</h5>
-                    <p class="card-text"> learning </p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Html - Css - JS - Bootstrap</li>
-                    <li class="list-group-item">PHP - MYSQL</li>
-                    <li class="list-group-item">Web</li>
-                </ul>
-                <div class="card-body">
-                    <a href="https://github.com/DevMohamedEmad/chatApp.git" class="btn bg-c-accept">Code </a>
-                    <a href="" class="btn bg-c-blue">Not Published</a>
-                </div>
-            </div>
-            <div class="card" style="width: 20rem; ">
-                <img src="./images/Screenshot from 2023-05-14 03-29-41.png" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">Bright Empire</h5>
-                    <p class="card-text"> The best limousine company with professional drivers proudly serving NYC and
-                        the TRI state area for decade</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Html - Css - JS - Bootstrap</li>
-                    <li class="list-group-item">Laravel (Dashboard)</li>
-                    <li class="list-group-item">Web</li>
-                </ul>
-                <div class="card-body">
-                    <a href="#" class="btn bg-c-accept">Code </a>
-                    <a href="https://brightempirelimonyc.com/" class="btn bg-c-blue">Show</a>
-                </div>
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 animate-fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    About <span class="text-blue-400">Me</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto"></div>
             </div>
 
-            <div class="card" style="width: 20rem; ">
-                <img src="./images/project1.png" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">Sci-App</h5>
-                    <p class="card-text"> My Graduation Project at Faculty of Science With Degree (-A)</p>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="animate-fade-in-up">
+                    <h3 class="text-2xl font-bold text-white mb-6">Mohamed Emad - Senior Backend Engineer</h3>
+                    <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                        I'm Mohamed Emad, a passionate Backend Developer with 3+ years of professional experience, specializing in building and maintaining scalable web applications using Laravel. A Computer Science graduate from Alexandria University, Faculty of Science.
+                    </p>
+                    <p class="text-gray-300 text-lg leading-relaxed mb-8">
+                        I bring strong problem-solving skills, clean code principles, and a solid understanding of software architecture. I'm committed to delivering high-performance backend solutions that align with business goals and ensure system reliability and security.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-slate-800/50 p-4 rounded-lg">
+                            <div class="text-3xl font-bold text-blue-400">3+</div>
+                            <div class="text-gray-300">Years Experience</div>
+                        </div>
+                        <div class="bg-slate-800/50 p-4 rounded-lg">
+                            <div class="text-3xl font-bold text-blue-400">15+</div>
+                            <div class="text-gray-300">Projects Completed</div>
+                        </div>
+                    </div>
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Html - Css - JS - Bootstrap</li>
-                    <li class="list-group-item">Laravel (Dashboard) + Flutter</li>
-                    <li class="list-group-item">Api</li>
-                </ul>
-                <div class="card-body">
-                    <a href="https://github.com/DevMohamedEmad/sciapp.git" class="btn bg-c-accept">Code </a>
-                    <a href="#" class="btn bg-c-blue">Not Published</a>
-                </div>
-            </div>
-            <div class="card" style="width: 20rem; ">
-                <img src="./images/Screenshot from 2023-05-14 18-04-26.png" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">My Portfolio</h5>
-                    <p class="card-text"> This Website created by me</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Html - Css - JS</li>
-                    <li class="list-group-item">Bootstrap</li>
-                    <li class="list-group-item">Github</li>
-                </ul>
-                <div class="card-body">
-                    <a href="https://github.com/DevMohamedEmad/myPortfolio.git" class="btn bg-c-accept">Code </a>
-                    <a href="https://devmohamedemad.github.io/myPortfolio/" class="btn bg-c-blue">Show</a>
-                </div>
-            </div>
 
-            <div class="card" style="width: 22rem; ">
-                <img src="./images/Screenshot from 2023-05-14 18-10-21.png" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">Livewire</h5>
-                    <p class="card-text"> Laravel-Livewire</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Html - Css - JS</li>
-                    <li class="list-group-item">Bootstrap</li>
-                    <li class="list-group-item">Laravel - Livewire</li>
-                </ul>
-                <div class="card-body">
-                    <a href="https://github.com/DevMohamedEmad/laravel-livewire" class="btn bg-c-accept">Code </a>
-                    <a href="" class="btn bg-c-blue">Not Published</a>
-                </div>
-            </div>
-
-            <div class="card" style="width: 22rem; ">
-                <img src="./images/Screenshot from 2023-05-14 18-15-26.png" class="card-img-top">
-                <div class="card-body">
-                    <h5 class="card-title">Landing Page</h5>
-                    <p class="card-text"></p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Html</li>
-                    <li class="list-group-item">Css</li>
-                    <li class="list-group-item">GitHub</li>
-                </ul>
-                <div class="card-body">
-                    <a href="https://github.com/DevMohamedEmad/Elzero-Practice.git" class="btn bg-c-accept">Code </a>
-                    <a href="https://devmohamedemad.github.io/Elzero-Practice/" class="btn bg-c-blue">Show</a>
+                <div class="grid grid-cols-2 gap-6 animate-fade-in-up">
+                    <div class="bg-slate-800/50 p-6 rounded-xl text-center hover:bg-slate-700/50 transition-colors duration-300">
+                        <i data-lucide="server" class="w-12 h-12 text-blue-400 mx-auto mb-4"></i>
+                        <h4 class="text-white font-semibold mb-2">Backend</h4>
+                        <p class="text-gray-400 text-sm">PHP, Laravel, GraphQL</p>
+                    </div>
+                    <div class="bg-slate-800/50 p-6 rounded-xl text-center hover:bg-slate-700/50 transition-colors duration-300">
+                        <i data-lucide="database" class="w-12 h-12 text-purple-400 mx-auto mb-4"></i>
+                        <h4 class="text-white font-semibold mb-2">Database</h4>
+                        <p class="text-gray-400 text-sm">MySQL, Database Design</p>
+                    </div>
+                    <div class="bg-slate-800/50 p-6 rounded-xl text-center hover:bg-slate-700/50 transition-colors duration-300">
+                        <i data-lucide="cloud" class="w-12 h-12 text-green-400 mx-auto mb-4"></i>
+                        <h4 class="text-white font-semibold mb-2">DevOps</h4>
+                        <p class="text-gray-400 text-sm">Server Management, CI/CD</p>
+                    </div>
+                    <div class="bg-slate-800/50 p-6 rounded-xl text-center hover:bg-slate-700/50 transition-colors duration-300">
+                        <i data-lucide="users" class="w-12 h-12 text-orange-400 mx-auto mb-4"></i>
+                        <h4 class="text-white font-semibold mb-2">Leadership</h4>
+                        <p class="text-gray-400 text-sm">Team Collaboration, Agile</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- end-projects -->
 
-    <!-- start-testemonial -->
-    <section class="projects" id="Testemonial">
-        <h2 class="title"> Our Testemonial</h2>
-        <div class="content">
-            <div class="project-card">
-                <div class="testemonial-image">
-                    <img src="./images/Screenshot from 2023-05-14 01-29-35.png" alt="" srcset="">
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6 bg-slate-800/30">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 animate-fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    My <span class="text-blue-400">Skills</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mb-4"></div>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+                    Here are the technologies I work with to bring ideas to life
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 mb-16 animate-fade-in-up">
+                <div class="group bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-4 md:p-6 text-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-orange-500 rounded-xl mx-auto mb-3 md:mb-4 flex items-center justify-center group-hover:shadow-lg transition-all duration-300">
+                        <span class="text-2xl md:text-3xl">🌐</span>
+                    </div>
+                    <h3 class="text-white font-semibold text-sm md:text-base lg:text-lg group-hover:text-blue-400 transition-colors">HTML/CSS</h3>
+                </div>
+                
+                <div class="group bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-4 md:p-6 text-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-yellow-500 rounded-xl mx-auto mb-3 md:mb-4 flex items-center justify-center group-hover:shadow-lg transition-all duration-300">
+                        <span class="text-2xl md:text-3xl">⚡</span>
+                    </div>
+                    <h3 class="text-white font-semibold text-sm md:text-base lg:text-lg group-hover:text-blue-400 transition-colors">JavaScript</h3>
+                </div>
+                
+                <div class="group bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-4 md:p-6 text-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-blue-500 rounded-xl mx-auto mb-3 md:mb-4 flex items-center justify-center group-hover:shadow-lg transition-all duration-300">
+                        <span class="text-2xl md:text-3xl">💫</span>
+                    </div>
+                    <h3 class="text-white font-semibold text-sm md:text-base lg:text-lg group-hover:text-blue-400 transition-colors">jQuery</h3>
+                </div>
+                
+                <div class="group bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-4 md:p-6 text-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-purple-500 rounded-xl mx-auto mb-3 md:mb-4 flex items-center justify-center group-hover:shadow-lg transition-all duration-300">
+                        <span class="text-2xl md:text-3xl">🔧</span>
+                    </div>
+                    <h3 class="text-white font-semibold text-sm md:text-base lg:text-lg group-hover:text-blue-400 transition-colors">PHP</h3>
+                </div>
+                
+                <div class="group bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-4 md:p-6 text-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-red-500 rounded-xl mx-auto mb-3 md:mb-4 flex items-center justify-center group-hover:shadow-lg transition-all duration-300">
+                        <span class="text-2xl md:text-3xl">🚀</span>
+                    </div>
+                    <h3 class="text-white font-semibold text-sm md:text-base lg:text-lg group-hover:text-blue-400 transition-colors">Laravel</h3>
+                </div>
+                
+                <div class="group bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-4 md:p-6 text-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-green-500 rounded-xl mx-auto mb-3 md:mb-4 flex items-center justify-center group-hover:shadow-lg transition-all duration-300">
+                        <span class="text-2xl md:text-3xl">🗄️</span>
+                    </div>
+                    <h3 class="text-white font-semibold text-sm md:text-base lg:text-lg group-hover:text-blue-400 transition-colors">MySQL</h3>
+                </div>
+                
+                <div class="group bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-4 md:p-6 text-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-indigo-500 rounded-xl mx-auto mb-3 md:mb-4 flex items-center justify-center group-hover:shadow-lg transition-all duration-300">
+                        <span class="text-2xl md:text-3xl">📱</span>
+                    </div>
+                    <h3 class="text-white font-semibold text-sm md:text-base lg:text-lg group-hover:text-blue-400 transition-colors">Bootstrap</h3>
+                </div>
+
+                <div class="group bg-slate-800/50 hover:bg-slate-700/50 rounded-xl p-4 md:p-6 text-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                    <div class="w-16 h-16 md:w-20 md:h-20 bg-pink-500 rounded-xl mx-auto mb-3 md:mb-4 flex items-center justify-center group-hover:shadow-lg transition-all duration-300">
+                        <span class="text-2xl md:text-3xl">🔗</span>
+                    </div>
+                    <h3 class="text-white font-semibold text-sm md:text-base lg:text-lg group-hover:text-blue-400 transition-colors">GraphQL</h3>
                 </div>
             </div>
-            <div class="project-card">
-                <div class="testemonial-image">
-                    <img src="./images/Screenshot from 2023-05-14 01-28-39.png" alt="" srcset="">
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 animate-fade-in-up">
+                <div class="text-center p-6 bg-slate-800/50 rounded-xl">
+                    <h4 class="text-xl font-bold text-white mb-3">Backend Development</h4>
+                    <p class="text-gray-300">
+                        Building robust server-side applications and RESTful APIs using PHP, Laravel, and GraphQL
+                    </p>
+                </div>
+                <div class="text-center p-6 bg-slate-800/50 rounded-xl">
+                    <h4 class="text-xl font-bold text-white mb-3">Database Management</h4>
+                    <p class="text-gray-300">
+                        Designing and managing databases with MySQL for optimal performance and scalability
+                    </p>
+                </div>
+                <div class="text-center p-6 bg-slate-800/50 rounded-xl sm:col-span-2 lg:col-span-1">
+                    <h4 class="text-xl font-bold text-white mb-3">DevOps & Deployment</h4>
+                    <p class="text-gray-300">
+                        Server management, CI/CD pipelines with GitHub Actions, and cloud deployment
+                    </p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- end-testemonial -->
-
-    <!-- Start - Contact -->
-    <section class="cards contact" id="contact">
-        <h2 class="title"> Let's Work Together </h2>
-        <div class="content">
-            <div class="card">
-                <div>
-                    <i class="fab fa-whatsapp"></i>
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-secondary/30">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Work Experience</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-4"></div>
+                <p class="text-xl text-muted-foreground max-w-2xl mx-auto">
+                    My professional journey in backend development and software engineering
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <!-- Experience 1 -->
+                <div class="relative pl-8 pb-12 animate-slide-up">
+                    <div class="absolute left-0 top-0 w-px h-full bg-primary/30"></div>
+                    <div class="absolute -left-2 top-0 w-4 h-4 bg-primary rounded-full border-4 border-background"></div>
+                    
+                    <div class="bg-card p-6 rounded-lg ml-6 hover:shadow-xl transition-all duration-300 border border-border/50">
+                        <div class="mb-4">
+                            <h3 class="text-2xl font-bold text-primary mb-1">Mid-level Backend Engineer</h3>
+                            <h4 class="text-lg font-semibold text-accent mb-1">Aqtar Company</h4>
+                            <div class="flex flex-col sm:flex-row sm:justify-between text-muted-foreground text-sm">
+                                <span>Alexandria, Egypt | Remote</span>
+                                <span>10/2024 - Current</span>
+                            </div>
+                        </div>
+                        
+                        <ul class="list-disc list-inside space-y-2 text-muted-foreground mb-4">
+                            <li class="leading-relaxed">Led backend architecture and development using Laravel, focusing on clean code and maintainability</li>
+                            <li class="leading-relaxed">Developed and optimized RESTful APIs for mobile and web applications</li>
+                            <li class="leading-relaxed">Integrated third-party services (payment gateways, SMS APIs, OAuth)</li>
+                            <li class="leading-relaxed">Created GitHub Actions workflows for automated deployment processes</li>
+                            <li class="leading-relaxed">Collaborated with cross-functional teams to deliver scalable features</li>
+                        </ul>
+                        
+                        <div>
+                            <h5 class="font-semibold text-foreground mb-2">Key Projects:</h5>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-primary/20 text-primary text-sm rounded-full">KaleemAi Life Coaching Solution</span>
+                                <span class="px-3 py-1 bg-primary/20 text-primary text-sm rounded-full">LMS</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="info">
-                    <h3>Whatsapp</h3>
-                    <ahref="https: //wtsi.me/201210382986">
-                        <p>Contact Me</p>
-                        </a>
+
+                <!-- Experience 2 -->
+                <div class="relative pl-8 pb-12 animate-slide-up" style="animation-delay: 0.2s;">
+                    <div class="absolute left-0 top-0 w-px h-full bg-primary/30"></div>
+                    <div class="absolute -left-2 top-0 w-4 h-4 bg-primary rounded-full border-4 border-background"></div>
+                    
+                    <div class="bg-card p-6 rounded-lg ml-6 hover:shadow-xl transition-all duration-300 border border-border/50">
+                        <div class="mb-4">
+                            <h3 class="text-2xl font-bold text-primary mb-1">Mid-level Backend Engineer</h3>
+                            <h4 class="text-lg font-semibold text-accent mb-1">WordReward</h4>
+                            <div class="flex flex-col sm:flex-row sm:justify-between text-muted-foreground text-sm">
+                                <span>Alexandria, Egypt | Remote</span>
+                                <span>10/2024 - 09/2025</span>
+                            </div>
+                        </div>
+                        
+                        <ul class="list-disc list-inside space-y-2 text-muted-foreground mb-4">
+                            <li class="leading-relaxed">Maintained and enhanced existing backend systems</li>
+                            <li class="leading-relaxed">Handled server management and deployment workflows</li>
+                            <li class="leading-relaxed">Monitored application performance and system uptime</li>
+                            <li class="leading-relaxed">Implemented security best practices and database backups</li>
+                        </ul>
+                        
+                        <div>
+                            <h5 class="font-semibold text-foreground mb-2">Key Projects:</h5>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-primary/20 text-primary text-sm rounded-full">E-commerce Application</span>
+                                <span class="px-3 py-1 bg-primary/20 text-primary text-sm rounded-full">Booking Systems</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="relative pl-8 pb-12 animate-slide-up" style="animation-delay: 0.4s;">
+                    <div class="absolute left-0 top-0 w-px h-full bg-primary/30"></div>
+                    <div class="absolute -left-2 top-0 w-4 h-4 bg-primary rounded-full border-4 border-background"></div>
+                    
+                    <div class="bg-card p-6 rounded-lg ml-6 hover:shadow-xl transition-all duration-300 border border-border/50">
+                        <div class="mb-4">
+                            <h3 class="text-2xl font-bold text-primary mb-1">Jr. Backend Developer</h3>
+                            <h4 class="text-lg font-semibold text-accent mb-1">Arabic Localizer</h4>
+                            <div class="flex flex-col sm:flex-row sm:justify-between text-muted-foreground text-sm">
+                                <span>Alexandria, Egypt | On-Site</span>
+                                <span>05/2023 - 10/2024</span>
+                            </div>
+                        </div>
+                        
+                        <ul class="list-disc list-inside space-y-2 text-muted-foreground mb-4">
+                            <li class="leading-relaxed">Provided backend fixes and enhancements based on business needs</li>
+                            <li class="leading-relaxed">Collaborated with team members to deliver maintainable solutions</li>
+                            <li class="leading-relaxed">Utilized Laravel, jQuery, and GraphQL for feature implementation</li>
+                        </ul>
+                        
+                        <div>
+                            <h5 class="font-semibold text-foreground mb-2">Key Projects:</h5>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-primary/20 text-primary text-sm rounded-full">ERP System</span>
+                                <span class="px-3 py-1 bg-primary/20 text-primary text-sm rounded-full">HR System</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 4 -->
+                <div class="relative pl-8 animate-slide-up" style="animation-delay: 0.6s;">
+                    <div class="absolute left-0 top-0 w-px h-full bg-primary/30"></div>
+                    <div class="absolute -left-2 top-0 w-4 h-4 bg-primary rounded-full border-4 border-background"></div>
+                    
+                    <div class="bg-card p-6 rounded-lg ml-6 hover:shadow-xl transition-all duration-300 border border-border/50">
+                        <div class="mb-4">
+                            <h3 class="text-2xl font-bold text-primary mb-1">Backend Developer (Intern)</h3>
+                            <h4 class="text-lg font-semibold text-accent mb-1">Information Technology Institute (MCIT)</h4>
+                            <div class="flex flex-col sm:flex-row sm:justify-between text-muted-foreground text-sm">
+                                <span>Alexandria, Egypt | Remote</span>
+                                <span>11/2022 - 03/2023</span>
+                            </div>
+                        </div>
+                        
+                        <ul class="list-disc list-inside space-y-2 text-muted-foreground mb-4">
+                            <li class="leading-relaxed">Contributed to open-source projects using Laravel and Angular</li>
+                            <li class="leading-relaxed">Developed both front-end and back-end components</li>
+                        </ul>
+                        
+                        <div>
+                            <h5 class="font-semibold text-foreground mb-2">Key Projects:</h5>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-primary/20 text-primary text-sm rounded-full">StackOverflow Clone</span>
+                                <span class="px-3 py-1 bg-primary/20 text-primary text-sm rounded-full">Mostaqel Clone</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 animate-fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    My <span class="text-blue-400">Projects</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mb-4"></div>
+                <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+                    A collection of projects that showcase my backend development skills and experience
+                </p>
+            </div>
 
-            <div class="card">
-                <div>
-                    <i class="fab fa-linkedin"></i>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-in-up">
+                <!-- Jamiah Project -->
+                <div class="bg-slate-800/50 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500&h=300&fit=crop" alt="KaleemAi Life Coaching" class="w-full h-48 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-3">Jamiah</h3>
+                        <p class="text-gray-300 text-sm mb-4">General Assembly – Bisha Chamber in Saudi Arabia</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-600/20 text-blue-300 rounded-full text-xs font-medium">Laravel</span>
+                            <span class="px-3 py-1 bg-blue-600/20 text-blue-300 rounded-full text-xs font-medium">HTML</span>
+                            <span class="px-3 py-1 bg-blue-600/20 text-blue-300 rounded-full text-xs font-medium">CSS</span>
+                            <span class="px-3 py-1 bg-blue-600/20 text-blue-300 rounded-full text-xs font-medium">JavaScript</span>
+                            <span class="px-3 py-1 bg-blue-600/20 text-blue-300 rounded-full text-xs font-medium">Bootstrap</span>
+
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors">
+                                <i data-lucide="external-link" class="w-4 h-4"></i>
+                                <span class="text-sm">Live Demo</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="info">
-                    <h3>Linkedin</h3>
-                    <a href="https://www.linkedin.com/in/mohamed-emad-264a36230">
-                        <p>Contact Me</p>
+
+              
+
+                <!-- DevZone Project -->
+                <div class="bg-slate-800/50 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                    <div class="relative overflow-hidden">
+                        <img src="https://devmohamedemad.github.io/myPortfolio/images/cover.png" alt="DevZone" class="w-full h-48 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-3">DevZone</h3>
+                        <p class="text-gray-300 text-sm mb-4">ITI graduation project - Developer community platform with Laravel backend and Angular frontend, featuring APIs and real-time communication.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-600/20 text-blue-300 rounded-full text-xs font-medium">Laravel</span>
+                            <span class="px-3 py-1 bg-blue-600/20 text-blue-300 rounded-full text-xs font-medium">Angular</span>
+                            <span class="px-3 py-1 bg-blue-600/20 text-blue-300 rounded-full text-xs font-medium">API</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/DevMohamedEmad/devZone" class="flex items-center space-x-2 text-gray-400 hover:text-gray-300 transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i>
+                                <span class="text-sm">Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bright Empire -->
+                <div class="bg-slate-800/50 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                    <div class="relative overflow-hidden">
+                        <img src="https://devmohamedemad.github.io/myPortfolio/images/Screenshot%20from%202023-05-14%2003-29-41.png" alt="Bright Empire" class="w-full h-48 object-cover transition-transform duration-300 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-3">Bright Empire Limo</h3>
+                        <p class="text-gray-300 text-sm mb-4">Professional limousine company website with booking system, payment integration, and admin dashboard for NYC and TRI state area.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-600/20 text-blue-300 rounded-full text-xs font-medium">Laravel</span>
+                            <span class="px-3 py-1 bg-blue-600/20 text-blue-300 rounded-full text-xs font-medium">Bootstrap</span>
+                            <span class="px-3 py-1 bg-blue-600/20 text-blue-300 rounded-full text-xs font-medium">JavaScript</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://brightempirelimonyc.com/" class="flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors">
+                                <i data-lucide="external-link" class="w-4 h-4"></i>
+                                <span class="text-sm">Live Demo</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+              
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 sm:py-20 px-4 sm:px-6 bg-slate-800/30">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12 sm:mb-16 animate-fade-in-up">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 sm:mb-6">
+                    Let's <span class="text-blue-400">Work Together</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mb-4"></div>
+                <p class="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto">
+                    Ready to collaborate? I'm always excited to work on new backend projects and discuss innovative solutions.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-12 sm:mb-16 animate-fade-in-up">
+                <div class="bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm border border-blue-500/20 rounded-2xl p-6 sm:p-8 text-center hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                        <i data-lucide="mail" class="w-8 h-8 sm:w-10 sm:h-10 text-white"></i>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-2 sm:mb-3">Email</h3>
+                    <p class="text-gray-300 text-sm sm:text-base">mohamedemad0592@gmail.com</p>
+                    <a href="mailto:mohamedemad0592@gmail.com" class="mt-3 sm:mt-4 text-blue-400 hover:text-blue-300 font-medium transition-colors block">
+                        Send Email
+                    </a>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm border border-green-500/20 rounded-2xl p-6 sm:p-8 text-center hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                        <i data-lucide="message-circle" class="w-8 h-8 sm:w-10 sm:h-10 text-white"></i>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-2 sm:mb-3">WhatsApp</h3>
+                    <p class="text-gray-300 text-sm sm:text-base">+20 121 038 2986</p>
+                    <a href="https://wa.me/qr/Z6CASRFHS4E7P1" target="_blank" class="mt-3 sm:mt-4 text-green-400 hover:text-green-300 font-medium transition-colors block">
+                        Contact Me
+                    </a>
+                </div>
+
+                <div class="bg-gradient-to-br from-blue-500/20 to-blue-700/20 backdrop-blur-sm border border-blue-400/20 rounded-2xl p-6 sm:p-8 text-center hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                        <i data-lucide="linkedin" class="w-8 h-8 sm:w-10 sm:h-10 text-white"></i>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-2 sm:mb-3">LinkedIn</h3>
+                    <p class="text-gray-300 text-sm sm:text-base">mohamed-emad-264a36230</p>
+                    <a href="https://www.linkedin.com/in/mohamed-emad-264a36230" class="mt-3 sm:mt-4 text-blue-400 hover:text-blue-300 font-medium transition-colors block">
+                        Connect
+                    </a>
+                </div>
+
+                <div class="bg-gradient-to-br from-orange-600/20 to-yellow-600/20 backdrop-blur-sm border border-orange-500/20 rounded-2xl p-6 sm:p-8 text-center hover:transform hover:scale-105 transition-all duration-300">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+                        <i data-lucide="briefcase" class="w-8 h-8 sm:w-10 sm:h-10 text-white"></i>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white mb-2 sm:mb-3">Wuzzuf</h3>
+                    <p class="text-gray-300 text-sm sm:text-base">Professional Profile</p>
+                    <a href="https://wuzzuf.net/me/Mohamed-Emad-604db23ece?utm_medium=other&utm_source=referral" class="mt-3 sm:mt-4 text-orange-400 hover:text-orange-300 font-medium transition-colors block">
+                        View Profile
                     </a>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="mosaqel-logo">
-                    <h3>WUZZUF</h3>
-                </div>
-                <div class="info">
-                    <h3>WUZZUF</h3>
-                    <a href="https://wuzzuf.net/me/Mohamed-Emad-604db23ece?utm_medium=other&utm_source=referral">
-                        <p>Contact Me</p>
+            <div class="text-center animate-fade-in-up">
+                <h3 class="text-2xl sm:text-3xl font-bold text-white mb-6 sm:mb-8">Follow Me</h3>
+                <div class="flex justify-center space-x-4 sm:space-x-6 mb-8 sm:mb-12">
+                    <a href="https://github.com/DevMohamedEmad" class="group bg-slate-800/50 hover:bg-blue-600 p-4 sm:p-5 rounded-2xl transition-all duration-300 transform hover:scale-110">
+                        <i data-lucide="github" class="w-6 h-6 sm:w-8 sm:h-8 text-gray-300 group-hover:text-white transition-colors"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mohamed-emad-264a36230" class="group bg-slate-800/50 hover:bg-blue-500 p-4 sm:p-5 rounded-2xl transition-all duration-300 transform hover:scale-110">
+                        <i data-lucide="linkedin" class="w-6 h-6 sm:w-8 sm:h-8 text-gray-300 group-hover:text-white transition-colors"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100034349611477" class="group bg-slate-800/50 hover:bg-blue-400 p-4 sm:p-5 rounded-2xl transition-all duration-300 transform hover:scale-110">
+                        <i data-lucide="facebook" class="w-6 h-6 sm:w-8 sm:h-8 text-gray-300 group-hover:text-white transition-colors"></i>
                     </a>
                 </div>
-            </div>
-
-            <div class="card">
-                <div>
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <div class="info">
-                    <h3>Email</h3>
-                    <a href="mailto:mohamedemad0592@gmail.com">
-                        <p>Contact Me </p>
-                    </a>
-                </div>
+                <p class="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto">
+                    I'm always open to discussing new backend development opportunities, innovative projects, or just having a chat about technology. 
+                    Feel free to reach out through any of the channels above!
+                </p>
             </div>
         </div>
     </section>
-    <!-- End - Contact -->
 
-    <!-- Start - Footer -->
-    <footer>
-        <p class="footer-title"></p>
-        <div class="social-icons">
-            <a href="https://github.com/DevMohamedEmad">
-                <i class="fab fa-github-square"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/mohamed-emad-264a36230">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://wa.me/qr/Z6CASRFHS4E7P1" target="_blank">
-                <i class="fab fa-whatsapp"></i>
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=100034349611477">
-                <i class="fab fa-facebook-square"></i>
-            </a>
-        </div>
 
-    </footer>
-    <!-- End - Footer -->
+    
 
-    <!-- More - Features -->
-    <!-- Scrolling - button -->
-    <button class="scroll"> <i class="fas fa-arrow-alt-circle-up"></i></button>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = mobileMenuBtn.querySelector('[data-lucide]');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                menuIcon.setAttribute('data-lucide', 'x');
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuIcon.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons();
+        });
+
+        // Close mobile menu when clicking on links
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-slate-900/95', 'backdrop-blur-sm', 'shadow-lg');
+                navbar.classList.remove('bg-transparent');
+            } else {
+                navbar.classList.remove('bg-slate-900/95', 'backdrop-blur-sm', 'shadow-lg');
+                navbar.classList.add('bg-transparent');
+            }
+        });
+
+        // Smooth scroll function
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Add click handlers to all navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const sectionId = link.getAttribute('href').substring(1);
+                scrollToSection(sectionId);
+            });
+        });
+
+        // Download CV function
+        function downloadCV() {
+            const link = document.createElement('a');
+            link.href = './Mohamed-Emad-Backend-Laravel-developer.pdf'; // Replace with your CV file path
+            link.download = './Mohamed-Emad-Backend-Laravel-developer.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Typewriter effect (simplified)
+        const typewriterElement = document.getElementById('typewriter');
+        const text = 'Backend Developer';
+        let index = 0;
+
+        function typeWriter() {
+            if (index < text.length) {
+                typewriterElement.textContent = text.substring(0, index + 1);
+                index++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+
+        // Start typewriter effect after page load
+        window.addEventListener('load', () => {
+            setTimeout(typeWriter, 1000);
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for animation
+        document.querySelectorAll('section > div').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
-<script src="./js/script.js"></script>
-
 </html>
